@@ -1,0 +1,38 @@
+h1 {
+    text-align: center;
+    background-color: #efefff;
+    font-family: Verdana, Tahoma, sans-serif;
+    border: 2px, dotted, blue;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    width: 250px;
+    margin-top: 20px;
+}
+
+p {
+    text-align: justify;
+    font-style: italic;
+    background-color: hsl(240, 100%, 97%);
+    padding: 20px;
+
+    border: 20px, black;
+    border-top-style: dotted;
+    border-bottom-style: dashed;
+    border-right-style: double;
+    border-left-style: groove;
+
+    width: 500px;
+}
+
+span {
+    font-weight: bold;
+    font-style: italic;
+    color: rgb(101, 88, 88);
+
+    margin-left: 2px;
+    margin-right: 5px;
+}
