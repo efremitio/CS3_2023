@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My First Webpage</title>
+    </head>
+    <body>
+        <div>
+            <h1>World Trigger</h1>
+            <p>World Trigger: A gate to another dimension has burst open, 
+                and from it emerge gigantic invincible creatures 
+                that threaten all of humanity. Earth's only defense 
+                is a mysterious group of warriors who have co-opted 
+                the alien technology in order to fight back! 
+                Follow our main character on their journey in achieving their goals</p>
+        </div>
+        <span>
+            <h3>Top 5 Favorite Characters</h3>
+            <ul>
+                <li>Kuga Yuuma</li>
+                <li>Amatori Chika</li>
+                <li>Mikumo Osamu</li>
+                <li>Hyuse</li>
+                <li>Jin Yuuichi</li>
+            <ul>
+        </span>
+    </body>
+</html>
