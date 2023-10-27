@@ -1,0 +1,10 @@
+.novels {
+    border: 3px solid blue;
+    border-collapse: separate;
+}
+
+td{
+    border: 2px solid blue;
+    border-collapse: separate;
+    text-align: center;
+}
