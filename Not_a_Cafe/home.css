@@ -45,18 +45,20 @@ a:hover{
 }
 
 #home-navbar .Not_a_Cafe {
+    margin-left: 4rem;
     font-size: 1.5rem;
     font-weight: bold;
 }
 
 #home-navbar .links {
     margin-right: auto;
-    margin-left: 22%;
+    margin-left: 20%;
     display: flex;
     gap: 3rem;
 }
 
 #home-navbar .bars {
+    margin-right: 4rem;
     font-size: 1rem;
     color: #271b17;
 }
