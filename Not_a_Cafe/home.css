@@ -17,8 +17,10 @@ header {
     z-index: 1;
 }
 
-main {
-    width: 97%;
+main{
+    padding-top: 130px;
+    width: 100%;
+    height: 500px;
     background-color: #cdb5a6;
 }
 
@@ -37,28 +39,27 @@ a:hover{
     color: #e0a387;
 }
 
-#menu-navbar {
-    margin-left: 0;
+#home-navbar {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-#menu-navbar .Not_a_Cafe {
+#home-navbar .Not_a_Cafe {
     margin-left: 4rem;
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-#menu-navbar .links {
+#home-navbar .links {
     margin-right: auto;
     margin-left: 20%;
     display: flex;
     gap: 3rem;
 }
 
-#menu-navbar .bars {
+#home-navbar .bars {
     margin-right: 4rem;
     font-size: 1rem;
     color: #271b17;
