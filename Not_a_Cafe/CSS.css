@@ -275,7 +275,7 @@ header {
 #RESERVATIONS {
     width: 100%;
     background-color: #cdb5a6;
-    background-image: url('images/A.jpg');
+    background-image: url('https://github.com/efremitio/CS3_2023/blob/main/Not_a_Cafe/images/A.jpg');
     transform: scale(0.9);
     height: 800px;
     
@@ -563,14 +563,14 @@ input[type=submit]:hover {
 }
 
 .x {
-    background: url('../CS3_2023/Not_a_Cafe/images/icons.png') no-repeat -105px -110px;
+    background: url('https://github.com/efremitio/CS3_2023/blob/main/Not_a_Cafe/images/icons.png') no-repeat -105px -110px;
     width: 100px;
 	height: 100px;
     transform: scale(0.6);
 }
 
 .facebook {
-    background: url('../CS3_2023/Not_a_Cafe/images/icons.png') no-repeat 0 -110px;
+    background: url('https://github.com/efremitio/CS3_2023/blob/main/Not_a_Cafe/images/icons.png') no-repeat 0 -110px;
 	width: 100px;
 	height: 100px;
     transform: scale(0.6);
