@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Not_a_Cafe</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="HTML, CSS, JavaScript">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://kit.fontawesome.com/92b3bfe8af.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="shit.css" /> 
+    </head>
+
+    <body>
+
+        <header>
+            <div id="reserve-navbar">
+                <diV class="resv-logo"><a href="https://efremitio.github.io/CS3_2023/Not_a_Cafe/Home.html" class="resv-Not_a_Cafe">⍥Not-a-Cafe</a></diV>
+                    <ul class="resv-links">
+                        <li class="resv-li"><a class="resv-a" href="https://efremitio.github.io/CS3_2023/Not_a_Cafe/Menu.html">Menu</a></li>
+                        <li class="resv-li"><a class="resv-a">Reservations</a></li>
+                        <li class="resv-li"><a class="resv-a" href="events">Events</a></li>
+                    </ul>
+                <div class="resv-bars"><i class="fas fa-bars"></i></div>
+                  </div>
+        </header>
+
+        <main id="RESERVATIONS">
+  
+            <div class="r-text">
+                  <h1>RESERVE</h1>
+                  <p>reserve your table now :D</p>
+            </div>
+            
+            <div class="reserve-form">
+                <form>
+
+
+                <div class="row">
+
+                  <div class="col-25">
+                    <label for="fname">First Name</label>
+                  </div>
+
+                  <div class="col-75">
+                    <input type="text" id="fname" name="firstname" placeholder="First name..">
+                  </div>
+
+                </div>
+
+
+                <div class="row">
+
+                  <div class="col-25">
+                    <label for="lname">Last Name</label>
+                  </div>
+
+                  <div class="col-75">
+                    <input type="text" id="lname" name="lastname" placeholder="Last name..">
+                  </div>
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="col-25">
+                      <label for="r-email">E-mail</label>
+                    </div>
+  
+                    <div class="col-75">
+                      <input type="email" id="r-email" name="E-mail" placeholder="E-mail...">
+                    </div>
+  
+                </div>
+
+
+                <div class="row">
+
+                    <div class="col-25">
+                      <label for="r-phonenum">Phone Number</label>
+                    </div>
+  
+                    <div class="col-75">
+                      <input type="text" id="r-phonenum" name="phonenumber" placeholder="Phone Number...">
+                    </div>
+  
+                </div>
+
+
+                <div class="row">
+
+                    <div class="col-25">
+                      <label for="guestnum"># of Guest</label>
+                    </div>
+  
+                    <div class="col-75">
+                      <input type="number" id="guestnum" name="guestnumber">
+                    </div>
+  
+                </div>
+
+
+                <div class="row">
+
+                    <div class="col-25">
+                      <label for="r-date">Date</label>
+                    </div>
+  
+                    <div class="col-75">
+                      <input type="datetime-local" id="r-date" name="date">
+                    </div>
+  
+                </div>
+
+
+                <div class="row">
+
+                  <div class="col-25">
+                    <label for="r-type">Reservation Type</label>
+                  </div>
+
+                  <div class="col-75">
+                    <select id="r-type" name="resevationtype">
+                      <option value="Dinner">Dinner</option>
+                      <option value="VIP/Mezzanine">VIP/Mezzanine</option>
+                      <option value="Birthday/Anniversary">Birthday/Anniversary</option>
+                      <option value="Holiday">Holiday</option>
+                      <option value="Private">Private</option>
+                      <option value="Wedding">Wedding</option>
+                      <option value="Corporate">Corporate</option>
+                      <option value="Other">Other</option>
+                    </select>
+                 </div> 
+
+
+                </div>
+
+
+                <div class="row">
+
+                    <div class="col-25">
+                      <label class="label" for="lname">If Other Please Specify</label>
+                    </div>
+  
+                    <div class="col-75">
+                      <input type="text" id="lname" name="lastname" placeholder="Specify...">
+                    </div>
+  
+                </div>
+  
+
+
+                <div class="row">
+
+                  <div class="col-25">
+                    <label for="subject">Any Special Request</label>
+                  </div>
+
+                  <div class="col-75">
+                    <textarea id="subject" name="subject" placeholder="Request.."></textarea>
+                  </div>
+
+                </div>
+
+
+                <br>
+                <div class="submit">
+                  <input type="submit" value="Submit">
+                </div>
+
+
+                </form>
+              </div>
+        </main>   
+
+        <footer id="resv-footer">
+            <p>Since 20XX</p>
+            <p>Non-Existing City, Nowhere Avenue</p>
+            <p><a href="https://efremitio.github.io/CS3_2023/Not_a_Cafe/Home.html">Visit our Website</a></p>
+        </footer>
+
+     </body>
+</html>
