@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Coding Challenge 2
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: lightseagreen;
+            }
+
+            div {
+                background-color: white;
+                width: 300px;
+                height: 30px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> RGB Color Equivalent </h1>
+
+        <div id="color">
+            rgb(255, 255, 255)
+        </div>
+        <br>
+        Red: <br>
+        <input id="red" type="range" min="0" max="255" value="255" onchange="ccolor();"> <br>
+        Green: <br>
+        <input id="green" type="range" min="0" max="255" value="255" onchange="ccolor();"><br>
+        Blue: <br>
+        <input id="blue" type="range" min="0" max="255" value="255" onchange="ccolor();">
+
+        <script>
+            // code to change the color and text of the div element
+           function ccolor(){
+                var R = document.getElementById("red").value;
+                var G = document.getElementById("green").value;
+                var B = document.getElementById("blue").value;
+
+                document.getElementById("color").style.backgroundColor = "rgb(" + R + ", " + G + ", " + B +")";
+                document.getElementById("color").innerHTML = "rgb(" + R + ", " + G + ", " + B + ")";
+           }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Coding Challenge 1
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: lightseagreen;
+            }
+
+            span {
+                background-color:yellow;
+                margin: 10px;
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>SRC Honesty Store</h1>
+        <div>
+            <span onclick="totalP(50)"> Burger - P50.00</span>
+            <span onclick="totalP(30)"> Fries - P30.00</span>
+            <span onclick="totalP(20)"> Juice - P20.00</span>
+        </div>
+
+        <h4>The total payment is: </h4>
+        <h3 id="total"></h3>
+        <span onclick="clearP()">Clear</span>
+
+        <script>
+            let total = 0;
+
+            //get the total payment and display in h3.
+            function totalP(price) {
+                if(total == 0){
+                    total = price;
+                }
+                else{
+                    total += price;
+                }
+                document.getElementById("total").innerHTML= total;
+            }
+            
+            //clears the total payment and display 0 in h3.
+            function clearP(){
+               total = 0;
+               document.getElementById("total").innerHTML= total;
+            }
+        </script>
+    </body>
+</html>

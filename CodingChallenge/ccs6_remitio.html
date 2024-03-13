@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Coding Challenge 6
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: lightseagreen;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <h1> Quadratic Formula </h1>
+
+        <button onclick="quadratic()">Find the root</button>
+
+        <h4 id="result"></h4>
+        <h3 id="function"></h3>
+
+        <script>
+
+            function quadratic(){
+
+            var a = prompt("input the coefficient a", "a");
+            var b = prompt("input the coefficient b", "b");
+            var c = prompt("input the coefficient c", "c");
+            var d = (b*b)-4*(a*c);
+
+                if(a == 0){
+                    document.getElementById("result").innerHTML="the function is invalid";
+                }
+
+                else{
+                    //display the quadratic function
+                    if (Math.sign(b)==-1 && Math.sign(c)==-1){
+                        document.getElementById("function").innerHTML= a+"x^2" + b + "x" + c;
+                    }
+
+                    else if (Math.sign(b)==-1){
+                        document.getElementById("function").innerHTML= a+"x^2" + b  + "x+" + c;
+                    }
+
+                    else if (Math.sign(c)==-1){
+                        document.getElementById("function").innerHTML= a+"x^2+" + b  + "x" + c;
+                    }
+
+                    else{
+                        document.getElementById("function").innerHTML= a+"x^2+" + b + "x+" + c;
+                    }
+
+                    //solve the roots of the quadratic function
+                    if(d > 0){
+                        var xi = ((-b -(Math.sqrt((b*b)- (4*a*c))))/2*a).toFixed(2);
+                        var xii = ((-b +(Math.sqrt((b*b)- (4*a*c))))/2*a).toFixed(2);
+
+                        document.getElementById("result").innerHTML="the roots are " + xi + " and " + xii;
+                    }   
+
+                    else if(d == 0){
+                        var xi = ((-b)/2*a).toFixed(2);
+                        var xii = xi;
+
+                        document.getElementById("result").innerHTML="the roots are equal, and are " + xi + " and " + xii;
+                    }
+
+                    else if(d < 0){
+                        document.getElementById("result").innerHTML="the roots are imaginary";
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

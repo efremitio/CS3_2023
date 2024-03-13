@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Coding Challenge 5
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: lightseagreen;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <h1> Modified FLAMES </h1>
+
+        <button onclick="flames()">Match Names</button>
+        <h3 id="name"></h3>
+
+        <h4>FLAMES Result:</h4>
+        <h3 id="result"></h3>
+
+
+        <script>
+            function flames(){
+                var nameA = prompt('Input Name', '...');
+                var nameB = prompt('Input Name', '...');
+                
+                var nameT = nameA.split(" ").join("").length + nameB.split(" ").join("").length;
+                var match = nameT % 6;
+
+                switch (match){
+                    case 1:
+                        document.getElementById("result").innerHTML = "F-Friends";
+                        break;
+
+                    case 2:
+                        document.getElementById("result").innerHTML = "L-lovers";
+                        break;
+
+                    case 3:
+                        document.getElementById("result").innerHTML = "A-Acquaintances";
+                        break;
+
+                    case 4:
+                        document.getElementById("result").innerHTML = "M-marriage";
+                        break;
+
+                    case 5:
+                        document.getElementById("result").innerHTML = "E-enemies";
+                        break;
+
+                    case 0:
+                        document.getElementById("result").innerHTML = "S-sweethearts";
+                        break;
+
+                    default:
+                    document.getElementById("result").innerHTML = "F-Friends, L-lovers, A-Acquaintances, M-marriage, E-enemies, and S-sweethearts";
+                        break;         
+                }
+
+                document.getElementById("name").innerHTML = nameA + " and " + nameB;
+            }
+        </script>
+    </body>
+</html>
