@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <style>
+            body {
+                background-color: rgb(177, 169, 226) ;
+            }
+
+            table, th, td{
+                margin-right: auto;
+                margin-left: auto;
+                border: 2px solid rgb(60, 55, 105);
+                border-collapse: collapse;
+            }
+
+            td {
+                font-weight: bold;
+                color: rgb(60, 55, 105);
+                background-color: white;
+                text-align: center;
+                padding: 10px;
+                width: 30px;
+                height: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <table id="mTable"></table>
+
+        <script>
+
+            do{
+                var n = prompt("Enter a Number from 2-10");
+                var m = prompt("Enter another Number from 2-10");
+            }while((n<2 || n>10)||(m<2 || m>10))
+
+            var i = 1;
+            var x="";
+            
+            while(i<=n){
+                var u =1;
+                while(u<=m){
+                    var multiple = i*u;
+                    x = x + "<td>" + multiple + "</td>";
+                    u++;
+                }
+                x = x + "</tr>";
+                i++;
+            }
+
+            document.getElementById("mTable").innerHTML=x;
+            
+        </script>
+    </body>
+</html>
