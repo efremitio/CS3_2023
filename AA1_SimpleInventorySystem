@@ -1,0 +1,156 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Inventory System</title>
+    <style>
+        body {
+                background-color: rgb(177, 169, 226);
+                font-family: 'Courier New', Courier, monospace;
+            }
+
+        h1 {
+            background-color: rgb(60, 55, 105);
+            color: white;
+            text-align: center;
+            padding-top: 40px;
+            height: 80px;
+        }
+
+        #content{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        #input{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 10px;
+            margin-right: 10%;
+            text-align: center;
+        }
+
+        input, button{
+            width: 200px;
+            height: 30px;
+            margin: 10px;
+        }
+       
+
+        table{
+            padding: 5px;
+            text-align: center;
+            border: 2px solid rgb(60, 55, 105);
+            border-collapse: collapse;
+            width: 800px;
+        }
+
+        td {
+            color: rgb(60, 55, 105);
+            background-color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        th {
+            font-weight: bold;
+            background-color: rgb(230, 232, 255);
+        }
+    </style>
+    </head>
+    <body>
+
+    <h1>Simple Supplies Inventory System</h1>
+    <div id="content">
+        <div id="input">
+            <input type="text" id="itemName" placeholder="Item Name">
+            <input type="number" id="noOfItem" placeholder="Number of Items">
+            <button onclick="addItem(document.getElementById('itemName').value, getElementById('noOfItem').value)">Add Item</button>
+            <button onclick="addNoOfItem(document.getElementById('itemName').value, document.getElementById('noOfItem').value)">Add</button>
+            <button onclick="subNoOfItem(document.getElementById('itemName').value, document.getElementById('noOfItem').value)">Sub</button>
+            <button onclick="removeItem(document.getElementById('itemName').value)">Remove</button>
+        </div>
+
+        <div id="table">
+            <table id="inventory">
+                <tr>
+                    <th>Item Name</th>
+                    <th>No. of Items</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+
+        var inventory = [];
+        
+        function addItem(name, num){
+            var item = {itemName: name, noOfItem: num};
+
+            if(!inventory.some(item => item.itemName === name)){ 
+                inventory.push(item); 
+                displayItems();
+            }
+            else {
+                alert("item already exist");
+            }
+        }
+
+
+        function addNoOfItem(name,num){
+            var item = inventory.find(item => item.itemName === name);
+            if (item) {
+                item.noOfItem = parseInt(item.noOfItem) + parseInt(num);
+                displayItems();
+            } else {
+                alert("Item not found in inventory.");
+            }       
+        }
+
+
+        function subNoOfItem(name, num){
+            var item = inventory.find(item => item.itemName === name);
+            if (item) {
+                if(num <= item.noOfItem){
+                    item.noOfItem = parseInt(item.noOfItem) - parseInt(num);
+                    displayItems();
+                }
+                else{
+                    alert("the amount is too large for the inventory");
+                }
+            } else {
+                alert("Item not found in inventory.");
+            }
+        }
+
+
+        function removeItem(name) {
+            inventory = inventory.filter(item => item.itemName !== name);
+            displayItems();
+        }
+
+       
+        function displayItems() {
+            var table = document.getElementById("inventory");
+
+            for (var i = table.rows.length - 1; i > 0; i--) {
+                table.deleteRow(i);
+            }
+
+            inventory.forEach(item => {
+                var row = table.insertRow(-1);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                cell1.innerHTML = item.itemName;
+                cell2.innerHTML = item.noOfItem;
+            });
+        }
+
+    </script>
+
+    </body>
+    </html>
