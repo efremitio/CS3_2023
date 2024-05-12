@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body {
+            background-color: rgb(177, 169, 226);
+            font-family: 'Courier New', Courier, monospace;
+        }
+                
+        h1 {
+            background-color: rgb(60, 55, 105);
+            color: white;
+            text-align: center;
+            padding-top: 40px;
+            height: 80px;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        fieldset {
+            background-color: white;
+        }
+
+        #formme{
+            color: rgb(60, 55, 105);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+        }
+            
+        input {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+          
+        label {
+            color: rgb(60, 55, 105);
+            width: 100px;
+            margin-right: 10px;
+        }
+        
+          
+        #display {
+            padding: 10px;
+            margin-top: 20px;
+            background-color:  rgb(60, 55, 105);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <main id="formm">
+        <div class="text">
+            <h1>FORM</h1>
+        </div>
+
+        <fieldset>
+            <form id="formme" onsubmit="return print();">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Name" onblur="blurInput(this)" onfocus="focusInput(this)">
+                <br>
+
+                <label for="uName">User Name</label>
+                <input type="text" id="uName" name="uName" placeholder="Preferred UserName" onblur="blurInput(this)" onfocus="focusInput(this)">
+                <br>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Email" onblur="blurInput(this)" onfocus="focusInput(this)">
+                <br>
+
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" onblur="blurInput(this)" onfocus="focusInput(this)">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="prefer not to say">Prefer not to say</option>
+                </select>
+                <br>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" onblur="blurInput(this)" onfocus="focusInput(this)">
+                <br>
+
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" placeholder="address" onblur="blurInput(this)" onfocus="focusInput(this)">
+                <br>
+
+                <label for="interest">Interest</label>
+                <textarea id="interest" name="interest" placeholder="My Interest..>"></textarea>
+                <br>
+
+                <div class="submit">
+                    <input type="submit" value="Submit">
+                </div>
+
+                <div class="reset">
+                    <input type="reset" value="Reset" onclick="resetForm()">
+                </div>
+            </form>
+        </fieldset>
+
+        <p id="display"></p>
+    </main>
+
+    <script>
+        function print() {
+            var name = document.getElementById("name").value;
+            var uName = document.getElementById("uName").value;
+            var email = document.getElementById("email").value;
+            var gender = document.getElementById("gender").value;
+            var password = document.getElementById("password").value;
+            var address = document.getElementById("address").value;
+            var interest = document.getElementById("interest").value;
+
+            var display = document.getElementById("display");
+            display.innerHTML = "Answers: <br>" + name + "<br>" + uName + "<br>" + email + "<br>" +
+                gender + "<br>" + password + "<br>" + address + "<br>" + interest;
+
+            return false;
+        }
+
+        function resetForm() {
+            document.getElementById("formme").reset();
+
+            var display = document.getElementById("display");
+            display.innerHTML = "";
+        }
+
+        function blurInput(input) {
+            if (input.value === "") {
+                input.style.borderColor = "red";
+            } else {
+                input.style.borderColor = "green";
+            }
+        }
+
+        function focusInput(input) {
+            input.style.borderColor = "green";
+        }
+    </script>
+</body>
+</html>
