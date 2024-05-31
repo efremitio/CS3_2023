@@ -3,7 +3,7 @@ body{
     background-color: rgb(165, 99, 42);
 }
 
-h1 {
+h1, footer {
     color:  rgb(231, 211, 183) ;
 }
 
