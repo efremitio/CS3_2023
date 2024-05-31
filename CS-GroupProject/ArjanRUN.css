@@ -1,0 +1,13 @@
+body{
+    text-align: center;
+    background-color: rgb(165, 99, 42);
+}
+
+h1 {
+    color:  rgb(231, 211, 183) ;
+}
+
+#game {
+    background-color: rgb(231, 211, 183);
+    border: 4px solid rgb(60, 31, 7);
+}
